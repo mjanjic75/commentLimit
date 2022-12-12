@@ -1,13 +1,16 @@
+var outputMessage = document.getElementById('output');
+var charWarnning = 15; // kada ostane 5 karaktera, obojiti poruku crvenom bojom
+var txtAreaLimit = 20;
+
 function txtCounter() {
-    var charMax = 15;
-    var charsRemaining = charMax - document.getElementById('limitComment').value.length;
+    var charCount = document.getElementById('limitComment').value.length;
+    var txtComment = document.getElementById('limitComment');
 
-    console.log();
-
-    if (charsRemaining < 0) {
-        output.innerHTML = 'Preostali broj karaktera je manji od nule!';
+    if (charCount > txtAreaLimit) {
+        txtComment.value = txtComment.value.substring(0, txtAreaLimit);
+        outputMessage.innerHTML = 'Preostali broj karaktera je 0!';
     }
     else {
-        output.innerHTML = `Preostalo ${charsRemaining} karaktera`;
+        outputMessage.innerHTML = `Preostalo ${txtAreaLimit - charCount} karaktera`;
     }
 }
