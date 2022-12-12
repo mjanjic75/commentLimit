@@ -1,4 +1,4 @@
-var charWarnning = 140; // kada ostane 5 karaktera, obojiti poruku crvenom bojom
+var charWarning = 140; // kada ostane 5 karaktera, obojiti poruku crvenom bojom
 var txtAreaLimit = 150;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -19,7 +19,7 @@ function txtCounter() {
         // da je preostalo -10, pa je potrebno postaviti vrednost na 0 u liniji 30
     }
 
-    if (charCount - charWarnning >= 0) {
+    if (charCount - charWarning >= 0) {
         // outputMessage.classList.add('red');
         // outputMessage.classList.remove('black');
         outputMessage.classList.add('text-danger');
